@@ -2,18 +2,20 @@
   "name": "redux-saga-fetcher",
   "version": "1.0.2",
   "description": "Universal data fetching for redux-saga and react-router",
+  "files": [
+    "lib"
+  ],
   "main": "lib/index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "build": "rimraf lib && babel src -d lib",
+    "build": "rimraf lib/* && babel src -d lib",
     "lint": "eslint src test *.js",
-    "prepublish": "publish-please guard && npm run build",
+    "prepublish": "npm run build",
     "tdd": "cross-env NODE_ENV=test karma start",
     "test": "npm run lint && npm run testonly",
-    "testonly": "npm run tdd -- --single-run",
-    "publish-please": "publish-please"
+    "testonly": "npm run tdd -- --single-run"
   },
   "repository": {
     "type": "git",
@@ -62,7 +64,6 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.7.0",
     "mocha": "^3.0.2",
-    "publish-please": "^2.2.0",
     "rimraf": "^2.5.4",
     "webpack": "^2.1.0-beta.21"
   },
