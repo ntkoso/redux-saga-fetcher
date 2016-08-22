@@ -1,6 +1,6 @@
 {
   "name": "redux-saga-fetcher",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Universal data fetching for redux-saga and react-router",
   "files": [
     "lib"
