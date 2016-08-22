@@ -27,8 +27,11 @@ class ReduxSagaFetcherContext extends React.Component {
 }
 
 ReduxSagaFetcherContext.propTypes = {
-  routerProps: PropTypes.isRequired,
-  locals: PropTypes.object,
+  routerProps: PropTypes.object.isRequired,
+  locals: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.object
+  ]),
   dispath: PropTypes.func,
   children: PropTypes.element.isRequired
 };
