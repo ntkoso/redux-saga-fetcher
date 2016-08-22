@@ -2,11 +2,11 @@ import React, { PropTypes } from 'react';
 import dispatchFetchers from '../dispatchFetchers';
 
 class ReduxSagaFetcherContext extends React.Component {
-  componentDidUpdate(prevProps) {
+  componentWillReceiveProps(nextProps) {
     const { routerProps } = this.props;
-    const prevRouterProps = prevProps.routerProps;
+    const nextRouterProps = nextProps.routerProps;
 
-    if (routerProps.location === prevRouterProps.location) {
+    if (routerProps.location === nextRouterProps.location) {
       return;
     }
 
