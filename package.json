@@ -1,0 +1,72 @@
+{
+  "name": "redux-saga-fetcher",
+  "version": "1.0.0",
+  "description": "Universal data fetching for redux-saga and react-router",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "rimraf lib && babel src -d lib",
+    "lint": "eslint src test *.js",
+    "prepublish": "npm run build",
+    "tdd": "cross-env NODE_ENV=test karma start",
+    "test": "npm run lint && npm run testonly",
+    "testonly": "npm run tdd -- --single-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ntkoso/redux-saga-fetcher.git"
+  },
+  "keywords": [
+    "react",
+    "react router",
+    "redux",
+    "redux saga",
+    "saga",
+    "fetch"
+  ],
+  "author": "Nikita Kosolapov <ntkoso@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ntkoso/redux-saga-fetcher/issues"
+  },
+  "homepage": "https://github.com/ntkoso/redux-saga-fetcher#readme",
+  "peerDependencies": {
+    "react": "^0.14.0 || ^15.0.0",
+    "react-router": "^2.3.0",
+    "redux-saga": "~0.11.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.13.2",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.5",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.11.1",
+    "chai": "^3.5.0",
+    "cross-env": "^2.0.0",
+    "eslint": "^3.3.1",
+    "eslint-config-airbnb": "^10.0.1",
+    "eslint-plugin-import": "^1.14.0",
+    "eslint-plugin-jsx-a11y": "^2.1.0",
+    "eslint-plugin-react": "^6.1.2",
+    "i-spy": "^1.0.1",
+    "karma": "^1.1.2",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-mocha": "^1.1.1",
+    "karma-mocha-reporter": "^2.1.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^3.0.2",
+    "rimraf": "^2.5.4",
+    "webpack": "^2.1.0-beta.21"
+  },
+  "dependencies": {
+    "lodash.flatten": "^4.3.0",
+    "lodash.isplainobject": "^4.0.5",
+    "lodash.values": "^4.2.0"
+  }
+}

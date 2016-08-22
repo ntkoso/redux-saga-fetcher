@@ -1,0 +1,18 @@
+{
+  "extends": ["airbnb"],
+
+  "env": {
+    "node": true,
+    "browser": true,
+    "mocha": true,
+    "es6": true
+  },
+
+  "parser": "babel-eslint",
+
+  "rules": {
+    "comma-dangle": [2, "never"],
+    "import/no-extraneous-dependencies": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  }
+}
