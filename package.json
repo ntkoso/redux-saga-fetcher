@@ -9,10 +9,11 @@
   "scripts": {
     "build": "rimraf lib && babel src -d lib",
     "lint": "eslint src test *.js",
-    "prepublish": "npm run build",
+    "prepublish": "publish-please guard && npm run build",
     "tdd": "cross-env NODE_ENV=test karma start",
     "test": "npm run lint && npm run testonly",
-    "testonly": "npm run tdd -- --single-run"
+    "testonly": "npm run tdd -- --single-run",
+    "publish-please": "publish-please"
   },
   "repository": {
     "type": "git",
@@ -61,6 +62,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.7.0",
     "mocha": "^3.0.2",
+    "publish-please": "^2.2.0",
     "rimraf": "^2.5.4",
     "webpack": "^2.1.0-beta.21"
   },
