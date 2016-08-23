@@ -31,7 +31,7 @@ import { compose } from 'redux';
 import { prefetch } from 'redux-saga-fetcher';
 import userSelector from '...';
 
-const Main = ({ user }) => <div>{user}</div>
+const Main = ({ user }) => (<div>{user}</div>);
 
 const container = compose(
   // prefetch container should always be on top
@@ -84,7 +84,7 @@ import { takeEvery } from 'redux-saga';
 import fetchUser from './sagas/fetchUser';
 
 export default function* rootSaga() {
-  yield* takeEvery('FETCH_USER', fetchUser)
+  yield* takeEvery('FETCH_USER', fetchUser);
 }
 ```
 
@@ -102,7 +102,7 @@ import rootSaga from './rootSaga';
 /* ... server middleware part */
 match({ location, routes }, (err, redirectLocation, routerProps) => {
   if (err) {
-    return next(err)
+    return next(err);
   }
 
   const saga = createSagaMiddleware();
@@ -132,7 +132,7 @@ match({ location, routes }, (err, redirectLocation, routerProps) => {
 
   sagaPromise // resolves when all sagas are finished
     .then(/* typical rendering code... */)
-    .catch(next)
+    .catch(next);
 });
 
 ```
@@ -177,6 +177,6 @@ ReactDOM.render(
     />
   </Provider>,
   container
-)
+);
 
 ```
