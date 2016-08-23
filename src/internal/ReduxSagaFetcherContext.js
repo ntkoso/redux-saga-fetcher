@@ -10,7 +10,7 @@ class ReduxSagaFetcherContext extends React.Component {
       return;
     }
 
-    this.triggerDispatch(this.props);
+    this.triggerDispatch(nextProps);
   }
 
   triggerDispatch({ dispatch, routerProps, locals }) {
