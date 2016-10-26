@@ -1,11 +1,11 @@
 ### Installation
 
 ```shell
-$ npm i -S react react-router@^2.8.0 redux redux-saga
+$ npm i -S react react-router@^3.0.0 redux redux-saga
 $ npm i -S redux-saga-fetcher
 ```
 
-### Usage with reat-router 2.x
+### Usage with react-router 2.x/3.x
 * [Wrap route handlers in `prefetch` container](guide/Container.md)
 * [Write sagas](guide/Sagas.md)
 * Render application

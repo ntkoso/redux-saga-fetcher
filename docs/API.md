@@ -21,9 +21,9 @@ type DispatchFetchersFn = (
 ) => void;
 ```
 
-### `useSagaFetcher` middleware for react-router 2.x
+### `useSagaFetcher` middleware for react-router 2.x/3.x
 
-React router v2.x middleware.
+React router v2.x/3.x middleware.
 Used for client side rendering.
 Initiates fetches when location has changed.
 
