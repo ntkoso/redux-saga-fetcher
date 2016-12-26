@@ -21,7 +21,7 @@ export default function *fetchUser(action) {
 ### Use it in root saga
 ```js
 // ./rootSaga.js
-import { takeEvery } from 'redux-saga';
+import { takeEvery } from 'redux-saga/effects';
 import fetchUser from './sagas/fetchUser';
 
 export default function* rootSaga() {
