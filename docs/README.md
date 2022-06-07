@@ -1,3 +1,5 @@
+### DEPRECATED: This is legacy project. Suspense and Async rendering should be used for data fetching!
+
 ### Installation
 
 ```shell
